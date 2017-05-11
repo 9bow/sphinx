@@ -7,12 +7,21 @@ CMD ["bash"]
 
 RUN apk update && \
   apk add \
-    py-sphinx \
-    py-sphinxcontrib-phpdomain@testing \
-    texlive-luatex@testing && \
+    texlive-luatex@testing \
+    zlib-dev \
+    jpeg-dev && \
   pip install \
     reportlab \
-    rst2pdf && \
+    rst2pdf \
+    sphinxcontrib-phpdomain \
+    sphinxcontrib-golangdomain \
+    sphinxcontrib-disqus \
+    sphinxcontrib-email \
+    sphinxcontrib-fancybox \
+    sphinxcontrib-gravatar \
+    sphinxcontrib-httpdomain \
+    sphinxcontrib-imagehelper \
+    sphinxcontrib-images && \
   rm -rf /var/cache/apk/*
 
 ADD rootfs /
