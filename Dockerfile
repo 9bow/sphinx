@@ -7,9 +7,20 @@ CMD ["bash"]
 
 RUN apk update && \
   apk add \
-    texlive-luatex@testing \
+    texlive-full@testing \
+    xz \
     zlib-dev \
     jpeg-dev && \
+  curl -sLo - \
+    ftp://ftp.tug.org/historic/systems/texlive/2016/texlive-20160523b-texmf.tar.xz | tar -Jxvf - --strip 1 -C /tmp && \
+  cp -rf \
+    /tmp/texmf-dist/* \
+    /usr/share/texmf-dist/ && \
+  rm -rf \
+    /tmp/texmf-dist && \
+  apk fix \
+    texlive \
+    texlive-full && \
   pip install \
     reportlab \
     rst2pdf \
