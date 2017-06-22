@@ -32,7 +32,8 @@ RUN apk update && \
     sphinxcontrib-gravatar \
     sphinxcontrib-httpdomain \
     sphinxcontrib-imagehelper \
-    sphinxcontrib-images && \
+    sphinxcontrib-images \
+    sphinx==1.5.6 && \
   rm -rf /var/cache/apk/*
 
 ADD rootfs /
