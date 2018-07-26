@@ -10,9 +10,10 @@ RUN apk update && \
     texlive-full@testing \
     xz \
     zlib-dev \
+    giflib-dev \
     jpeg-dev && \
   curl -sLo - \
-    ftp://ftp.tug.org/historic/systems/texlive/2016/texlive-20160523b-texmf.tar.xz | tar -Jxvf - --strip 1 -C /tmp && \
+    ftp://ftp.tug.org/historic/systems/texlive/2017/texlive-20170524-texmf.tar.xz | tar -Jxvf - --strip 1 -C /tmp && \
   cp -rf \
     /tmp/texmf-dist/* \
     /usr/share/texmf-dist/ && \
