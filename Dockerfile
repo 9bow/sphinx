@@ -50,4 +50,4 @@ LABEL org.label-schema.vcs-ref=$VCS_REF
 LABEL org.label-schema.vcs-url="https://github.com/dockhippie/sphinx.git"
 LABEL org.label-schema.name="Sphinx"
 LABEL org.label-schema.vendor="Thomas Boerger"
-LABEL org.label-schema.schema-version="1.1"
+LABEL org.label-schema.schema-version="1.0"
